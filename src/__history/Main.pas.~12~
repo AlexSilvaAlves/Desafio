@@ -1,0 +1,75 @@
+unit Main;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.AppEvnts;
+
+type
+  TfMain = class(TForm)
+    btDatasetLoop: TButton;
+    btThreads: TButton;
+    btStreams: TButton;
+    ApplicationEvents1: TApplicationEvents;
+    procedure btDatasetLoopClick(Sender: TObject);
+    procedure btStreamsClick(Sender: TObject);
+    procedure ApplicationEvents1Exception(Sender: TObject; E: Exception);
+    procedure btThreadsClick(Sender: TObject);
+  private
+  public
+    procedure GravaLog(const msg: string);
+  end;
+
+var
+  fMain: TfMain;
+
+implementation
+
+{$R *.dfm}
+
+uses ClienteServidor, DatasetLoop;
+
+
+procedure TfMain.ApplicationEvents1Exception(Sender: TObject; E: Exception);
+begin
+  GravaLog(E.Message);
+end;
+
+procedure TfMain.btDatasetLoopClick(Sender: TObject);
+begin
+  fDatasetLoop.show;
+end;
+
+procedure TfMain.btStreamsClick(Sender: TObject);
+begin
+  fClienteServidor.show;
+end;
+
+procedure TfMain.btThreadsClick(Sender: TObject);
+begin
+ f
+end;
+
+procedure TfMain.GravaLog(const msg: string);
+var
+  sArqLog: string;
+  fFileLog: TextFile;
+begin
+  if not DirectoryExists(ExtractFilePath(ParamStr(0)) + 'Log') then
+    ForceDirectories(PChar(ExtractFilePath(ParamStr(0)) + 'Log'));
+
+  sArqLog :=  ExtractFilePath(ParamStr(0)) + 'Log\LogFoo.txt';
+  AssignFile(fFileLog, sArqLog);
+
+  if FileExists(sArqLog) then
+    Append(fFileLog)
+  else
+    Rewrite(fFileLog);
+
+  Writeln(fFileLog, DateTimeToStr(now)+' - '+msg);
+
+  CloseFile(fFileLog);
+end;
+
+end.

@@ -1,0 +1,107 @@
+unit uParalelo;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.ComCtrls, Vcl.StdCtrls, Datasnap.DBClient, Data.DB,
+  Datasnap.Provider, SimpleDS;
+
+type
+  TfParalelo = class(TForm)
+    Edit1: TEdit;
+    Label1: TLabel;
+    Button1: TButton;
+    ProgressBar1: TProgressBar;
+  private
+    procedure EnviarSemErros;
+    function SalvarArquivos(AData: OleVariant): Boolean;
+    function InitDataset: TClientDataset;
+    FPath: String;
+  public
+    { Public declarations }
+  end;
+
+var
+  fParalelo: TfParalelo;
+
+implementation
+
+{$R *.dfm}
+
+uses ClienteServidor;
+
+{ TfParalelo }
+
+procedure TfParalelo.EnviarSemErros;
+var
+  cds: TClientDataset;
+begin
+  cds := InitDataset;
+  try
+    try
+       cds.Append;
+       TBlobField(cds.FieldByName('Arquivo')).LoadFromFile(string(FPath));
+       cds.Post;
+
+       SalvarArquivos(cds.Data);
+    except
+       On E: Exception do
+       begin
+         ShowMessage(E.Message);
+         FServidor.RollBackDeArquivos(ExtractFilePath(ParamStr(0)) + 'Servidor\');
+       end;
+    end;
+  finally
+   FreeAndNil(cds);
+  end;
+
+end;
+
+function TfParalelo.InitDataset: TClientDataset;
+begin
+  Result := TClientDataset.Create(nil);
+  Result.FieldDefs.Add('Arquivo', ftBlob);
+  Result.CreateDataSet;
+end;
+
+function TfParalelo.SalvarArquivos(AData: OleVariant): Boolean;
+var
+  cds: TClientDataSet;
+  FileName: string;
+  i: integer;
+begin
+  Result := False;
+  try
+    fClienteServidor.ProgressBar.Min := 0;
+    fClienteServidor.ProgressBar.Max := QTD_ARQUIVOS_ENVIAR;
+
+    cds := TClientDataset.Create(nil);
+    cds.Data := AData;
+
+    {$REGION Simulação de erro, não alterar}
+    if cds.RecordCount = 0 then
+      Exit;
+    {$ENDREGION}
+
+    cds.First;
+
+    For i := 0 to  QTD_ARQUIVOS_ENVIAR do
+    begin
+        FileName := string(FPath) + IntToStr(i) + '.pdf';
+
+        if TFile.Exists(FileName) then
+          TFile.Delete(FileName);
+
+        TBlobField(cds.FieldByName('Arquivo')).SaveToFile(FileName);
+         fClienteServidor.ProgressBar.Position := i;
+    end;
+
+    FreeAndNil(cds);
+    Result := True;
+  except
+     raise;
+  end;
+end;
+
+end.

@@ -1,0 +1,72 @@
+09/07/2022 21:57:06 - Insufficient memory for this operation.
+09/07/2022 21:57:11 - Insufficient memory for this operation.
+10/07/2022 00:50:17 - Access violation at address 005DCB97 in module 'Foo.exe'. Read of address 000003CC
+10/07/2022 13:32:29 - Access violation at address 004C55B8 in module 'Foo.exe'. Read of address 00000024
+10/07/2022 13:33:54 - Access violation at address 004C55B8 in module 'Foo.exe'. Read of address 00000024
+10/07/2022 16:59:40 - Access violation at address 004C55B8 in module 'Foo.exe'. Read of address 00000024
+11/07/2022 03:04:02 - Thread Error: Identificador inválido (6)
+11/07/2022 03:04:21 - Thread Error: Identificador inválido (6)
+11/07/2022 03:04:39 - Thread Error: Identificador inválido (6)
+11/07/2022 03:05:09 - Thread Error: Identificador inválido (6)
+11/07/2022 03:05:14 - Thread Error: Identificador inválido (6)
+11/07/2022 03:24:32 - Insufficient memory for this operation.
+11/07/2022 03:24:34 - Insufficient memory for this operation.
+11/07/2022 04:42:46 - Cannot perform this operation on a closed dataset
+11/07/2022 09:45:07 - Insufficient memory for this operation.
+11/07/2022 09:45:08 - Insufficient memory for this operation.
+11/07/2022 09:45:09 - Insufficient memory for this operation.
+11/07/2022 09:45:10 - Insufficient memory for this operation.
+11/07/2022 09:45:12 - Insufficient memory for this operation.
+11/07/2022 09:45:13 - Insufficient memory for this operation.
+11/07/2022 13:36:44 - Insufficient memory for this operation.
+11/07/2022 13:36:44 - Insufficient memory for this operation.
+11/07/2022 13:36:44 - Insufficient memory for this operation.
+11/07/2022 13:36:44 - Insufficient memory for this operation.
+11/07/2022 13:36:44 - Insufficient memory for this operation.
+11/07/2022 13:36:44 - Insufficient memory for this operation.
+11/07/2022 13:36:44 - Insufficient memory for this operation.
+11/07/2022 13:36:44 - Insufficient memory for this operation.
+11/07/2022 13:36:44 - Insufficient memory for this operation.
+11/07/2022 13:36:44 - Insufficient memory for this operation.
+11/07/2022 13:36:44 - Insufficient memory for this operation.
+11/07/2022 13:36:44 - Insufficient memory for this operation.
+11/07/2022 13:36:44 - Insufficient memory for this operation.
+11/07/2022 13:36:44 - Insufficient memory for this operation.
+11/07/2022 13:36:44 - Insufficient memory for this operation.
+11/07/2022 13:36:44 - Insufficient memory for this operation.
+11/07/2022 13:36:44 - Insufficient memory for this operation.
+11/07/2022 13:36:44 - Insufficient memory for this operation.
+11/07/2022 13:36:44 - Insufficient memory for this operation.
+11/07/2022 13:36:44 - Insufficient memory for this operation.
+11/07/2022 13:36:44 - Insufficient memory for this operation.
+11/07/2022 13:36:44 - Insufficient memory for this operation.
+11/07/2022 13:36:44 - Insufficient memory for this operation.
+11/07/2022 13:36:44 - Insufficient memory for this operation.
+11/07/2022 13:36:44 - Insufficient memory for this operation.
+11/07/2022 13:36:44 - Insufficient memory for this operation.
+11/07/2022 13:36:44 - Insufficient memory for this operation.
+11/07/2022 13:36:44 - Insufficient memory for this operation.
+11/07/2022 13:36:44 - Insufficient memory for this operation.
+11/07/2022 13:36:44 - Insufficient memory for this operation.
+11/07/2022 13:36:44 - Insufficient memory for this operation.
+11/07/2022 13:36:44 - Insufficient memory for this operation.
+11/07/2022 13:36:44 - Insufficient memory for this operation.
+11/07/2022 13:36:44 - Insufficient memory for this operation.
+11/07/2022 13:36:48 - Access violation at address 0064351C in module 'Foo.exe'. Read of address 000000A9
+11/07/2022 13:36:48 - Access violation at address 0064351C in module 'Foo.exe'. Read of address 000000A9
+11/07/2022 13:37:43 - Insufficient memory for this operation.
+11/07/2022 13:37:43 - Insufficient memory for this operation.
+11/07/2022 13:37:44 - Insufficient memory for this operation.
+11/07/2022 13:37:44 - Insufficient memory for this operation.
+11/07/2022 13:53:56 - Insufficient memory for this operation.
+11/07/2022 13:53:56 - Insufficient memory for this operation.
+11/07/2022 13:53:58 - Insufficient memory for this operation.
+11/07/2022 13:53:58 - Insufficient memory for this operation.
+11/07/2022 13:53:59 - Insufficient memory for this operation.
+11/07/2022 13:53:59 - Insufficient memory for this operation.
+11/07/2022 14:29:01 - Insufficient memory for this operation.
+11/07/2022 14:29:01 - Insufficient memory for this operation.
+11/07/2022 14:33:17 - Insufficient memory for this operation.
+11/07/2022 14:33:17 - Insufficient memory for this operation.
+11/07/2022 14:33:20 - Insufficient memory for this operation.
+11/07/2022 14:33:20 - Insufficient memory for this operation.

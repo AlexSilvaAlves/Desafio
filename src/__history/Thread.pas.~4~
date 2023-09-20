@@ -1,0 +1,49 @@
+unit Thread;
+
+interface
+
+uses
+  classes, SysUtils, Windows, ComCtrls;
+
+type
+  TMainThread = class(TThread)
+  private
+    FiTempo : integer;
+    FProgressBar: TProgressBar;
+    FTempo: integer;
+  public
+    constructor Create; overload;
+    procedure Progress;
+    procedure Execute; override;
+
+    property Tempo: integer read FTempo write FTempo;
+    property ProgressBar: TProgressBar read FProgressBar write FProgressBar;
+ end;
+
+
+implementation
+
+{ TMainThread }
+
+constructor TMainThread.Create;
+begin
+  inherited
+  Create(True);
+
+end;
+
+procedure TMainThread.Execute;
+begin
+  while True do
+  begin
+    Sleep(FiTempo);
+    Synchronize(Progress);
+  end;
+end;
+
+procedure TMainThread.Progress;
+begin
+  FProgressBar.StepIt;
+end;
+
+end.

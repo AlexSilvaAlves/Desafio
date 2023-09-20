@@ -1,0 +1,31 @@
+unit GerenciamentoDeExcecoes;
+
+interface
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.AppEvnts;
+
+  Type
+    TGerenciamentoDeExecoes = class
+    private
+    public
+    constructor create;
+    destructor destroy; override;
+    end;
+
+implementation
+
+{ TGerenciamentoDeExecoes }
+
+constructor TGerenciamentoDeExecoes.create;
+begin
+
+end;
+
+destructor TGerenciamentoDeExecoes.destroy;
+begin
+
+  inherited;
+end;
+
+end.

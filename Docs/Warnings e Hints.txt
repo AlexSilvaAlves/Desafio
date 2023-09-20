@@ -1,0 +1,22 @@
+[dcc32 Warning] ClienteServidor.pas(57): W1057 Implicit string cast from 'AnsiString' to 'string'
+[dcc32 Warning] ClienteServidor.pas(78): W1057 Implicit string cast from 'AnsiString' to 'string'
+Solução: Usar a função string()
+
+[dcc32 Warning] ClienteServidor.pas(88): W1002 Symbol 'IncludeTrailingBackslash' is specific to a platform
+Solução: incluir diretiva de compilação {$WARN SYMBOL_PLATFORM OFF}  {$WARN SYMBOL_PLATFORM ON} ente o comando
+
+[dcc32 Warning] ClienteServidor.pas(88): W1058 Implicit string cast with potential data loss from 'string' to 'AnsiString'
+[dcc32 Warning] ClienteServidor.pas(103): W1058 Implicit string cast with potential data loss from 'string' to 'AnsiString'
+Solução: usar funcção AnsiString()
+
+[dcc32 Warning] ClienteServidor.pas(124): W1057 Implicit string cast from 'AnsiString' to 'string'
+Solução: Incluir uma fução string() para converter a varável FPath 
+
+[dcc32 Hint] ClienteServidor.pas(134): H2077 Value assigned to 'TServidor.SalvarArquivos' never used
+Solução: Havia um clausula Result após um comando expect que não seria executada, ele foi movida para a linha antes do try 
+
+[dcc32 Warning] ClienteServidor.pas(117): W1035 Return value of function 'TServidor.SalvarArquivos' might be undefined
+Solução: A solução anterior resolveu esta quest~]ao também, pois se ela não estivsee ali, a função corre o risco de não retornar nada.
+
+Success
+Elapsed time: 00:00:01.2

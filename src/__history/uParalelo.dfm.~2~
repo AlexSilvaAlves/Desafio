@@ -1,0 +1,50 @@
+object fParalelo: TfParalelo
+  Left = 0
+  Top = 0
+  Caption = 'fParalelo'
+  ClientHeight = 131
+  ClientWidth = 196
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Label1: TLabel
+    Left = 40
+    Top = 11
+    Width = 100
+    Height = 13
+    Caption = 'Qtd. Arquivos Enviar'
+  end
+  object Edit1: TEdit
+    Left = 40
+    Top = 30
+    Width = 121
+    Height = 21
+    TabOrder = 0
+    Text = '100'
+  end
+  object Button1: TButton
+    Left = 40
+    Top = 70
+    Width = 121
+    Height = 25
+    Caption = 'Enviar'
+    TabOrder = 1
+  end
+  object ProgressBar1: TProgressBar
+    Left = 0
+    Top = 114
+    Width = 196
+    Height = 17
+    Align = alBottom
+    TabOrder = 2
+    ExplicitLeft = 24
+    ExplicitTop = 126
+    ExplicitWidth = 150
+  end
+end

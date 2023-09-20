@@ -1,0 +1,14 @@
+unit GerenciamentoDeExcecoes;
+
+interface
+  Type
+    TGerenciamentoDeExecoes = class
+    private
+    protected
+    public
+    published
+    end;
+
+implementation
+
+end.

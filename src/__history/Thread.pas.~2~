@@ -1,0 +1,22 @@
+unit Thread;
+
+interface
+
+uses
+  classes, SysUtils, Windows, ComCtrls;
+
+type
+  TMainThread = class(TThread)
+  private
+    FiTempo : integer;
+    FProgressBar: TProgressBar;
+  public
+    constructor Create; overload;
+    procedure Progress;
+    procedure Execute; override;
+
+
+
+implementation
+
+end.

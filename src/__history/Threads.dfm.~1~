@@ -1,0 +1,75 @@
+object fThreads: TfThreads
+  Left = 0
+  Top = 0
+  Caption = 'fThreads'
+  ClientHeight = 289
+  ClientWidth = 227
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Label1: TLabel
+    Left = 8
+    Top = 9
+    Width = 69
+    Height = 13
+    Caption = 'N'#186' de Threads'
+  end
+  object Label2: TLabel
+    Left = 8
+    Top = 61
+    Width = 32
+    Height = 13
+    Caption = 'Tempo'
+  end
+  object Edit1: TEdit
+    Left = 8
+    Top = 28
+    Width = 121
+    Height = 21
+    TabOrder = 0
+    Text = 'Edit1'
+  end
+  object Edit2: TEdit
+    Left = 8
+    Top = 80
+    Width = 121
+    Height = 21
+    TabOrder = 1
+    Text = 'Edit2'
+  end
+  object Button1: TButton
+    Left = 148
+    Top = 105
+    Width = 75
+    Height = 25
+    Caption = 'Ok'
+    TabOrder = 2
+  end
+  object ProgressBar1: TProgressBar
+    Left = 0
+    Top = 272
+    Width = 227
+    Height = 17
+    Align = alBottom
+    TabOrder = 3
+    ExplicitLeft = 6
+    ExplicitTop = 264
+    ExplicitWidth = 150
+  end
+  object Memo1: TMemo
+    Left = 0
+    Top = 136
+    Width = 227
+    Height = 136
+    Align = alBottom
+    Lines.Strings = (
+      'Memo1')
+    TabOrder = 4
+  end
+end
